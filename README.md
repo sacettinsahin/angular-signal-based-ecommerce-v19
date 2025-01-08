@@ -1,0 +1,1 @@
+# angular-signal-based-ecommerce-v19
