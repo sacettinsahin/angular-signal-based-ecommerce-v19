@@ -2,6 +2,7 @@
   <!--image-->
   <div class="flex justify-center">
     <img [src]="data().image" class="w-[200px] h-[100px] object-contain" />
+     <!-- <img src="https://via.placeholder.com/200x150" alt="img"> -->
   </div>
 
   <!--info-->
@@ -19,5 +20,12 @@
       class="w-full"
       (btnMethod)="addToCart()"
     ></app-button>
+  </div>
+
+  <!--rating-->
+  <div
+    class="absolute top-4 right-4 rounded-sm bg-gray-600 px-1 text-white text-sm font-medium shadow-md"
+  >
+    {{ data().rating.rate }} / 5
   </div>
 </div>
