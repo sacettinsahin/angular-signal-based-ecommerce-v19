@@ -16,8 +16,4 @@ export class HeaderComponent {
   btnText = computed(()=>{
     return `Cart(${this.cartService.cart().length})`
   })
-
-  public showCart():void{
-    console.log("show cart.")
-  }
 }
