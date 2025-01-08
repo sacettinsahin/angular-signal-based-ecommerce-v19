@@ -6,8 +6,7 @@
 
   <!--cart button-->
   <app-button
-    label="cart"
+    [label]="btnText()"
     (btnMethod)="showCart()"
-    [isCart]="true"
   ></app-button>
 </div>

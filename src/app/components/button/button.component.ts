@@ -9,16 +9,9 @@ import { Component,input, computed, output } from '@angular/core';
 })
 export class ButtonComponent {
   label = input.required<string>();
-  isCart = input<boolean>(false);
   type = input<'primary' | 'secondary'>("primary");
   btnMethod = output<void>();
   class = input<string>('');
-
-
-  text = computed(()=>{
-    return this.isCart() ? `${this.label()}(0)` : `${this.label()}`;
-  })
-
 
   public handleMethod():void{
     this.btnMethod.emit();

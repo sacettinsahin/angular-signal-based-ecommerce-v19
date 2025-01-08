@@ -1,7 +1,8 @@
-import { Component, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { Product } from '../../models/product.model';
 import { ButtonComponent } from "../button/button.component";
 import { CommonModule } from '@angular/common';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product-card',
@@ -12,7 +13,9 @@ import { CommonModule } from '@angular/common';
 export class ProductCardComponent {
   data = input.required<Product>();
 
-  addToCart():void{
-    console.log("card component button.")
+  cartService = inject(CartService);
+
+  addToCart(product:Product):void{
+    this.cartService.addToCart(product);
   }
 }
