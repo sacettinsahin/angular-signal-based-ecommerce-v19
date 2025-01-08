@@ -1,0 +1,10 @@
+<button
+[ngClass]="{
+    'bg-slate-400 text-slate-700': type() === 'primary',
+    'bg-orange-500 text-white': type() === 'secondary',
+    'px-5 py-1 rounded-sm capitalize font-medium': true
+  }"
+  (click)="handleMethod()"
+>
+  {{ text() }}
+</button>
