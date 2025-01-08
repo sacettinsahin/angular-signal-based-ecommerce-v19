@@ -12,6 +12,7 @@ export class ButtonComponent {
   isCart = input<boolean>(false);
   type = input<'primary' | 'secondary'>("primary");
   btnMethod = output<void>();
+  class = input<string>('');
 
 
   text = computed(()=>{
