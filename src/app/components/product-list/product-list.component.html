@@ -1,5 +1,9 @@
+@if(isLoading()){
+<div class="">Loading.</div>
+}@else{
 <div class="p-8 grid grid-cols-3 gap-3 ">
     @for (product of products(); track product.id) {
-        <app-product-card [data]="product"></app-product-card>
+    <app-product-card [data]="product"></app-product-card>
     }
 </div>
+}

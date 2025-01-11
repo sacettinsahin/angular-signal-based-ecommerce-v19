@@ -10,10 +10,13 @@ import { ProductCardComponent } from '../product-card/product-card.component';
 })
 export class ProductListComponent {
   products = signal<Product[]>([]);
+  isLoading = signal<boolean>(false);
 
   async ngOnInit(){
+    this.isLoading.set(true);
     const res = await fetch("https://fakestoreapi.com/products");
     const data = await res.json();
     this.products.set(data);
+    this.isLoading.set(false);
   }
 }
